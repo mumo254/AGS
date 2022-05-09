@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% load static%}
+{% block content%}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="text-center mt-5">
+                <h1 class="heading">PROFILE</h1>
+                <p>“You're a car, but most of all, what you are, <br> what you've become, is a mate. <br> And that's what makes a car special. <br> That's what makes a car great. You start to think of it as a person"</p>
+                <p>Jeremy Clarkson</p>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 profile-details">
+            {% for profile in profiles %}
+            <div class="mt-4 p-3 text-center">
+
+                <img class="prof-pic" src="{{profile.profile_pic.url}}" alt="">
+                <p class="mt-2">{{profile.first_name}} {{profile.last_name}}</p>
+                <p><i class="fas fa-user me-2"></i>{{profile.category}}</p>
+                <p><i class="fas fa-quote-right me-2"></i>{{profile.description}}</p>
+                
+                <h6>CONTACT INFORMATION</h6>
+                <p><i class="far fa-envelope me-2"></i>{{profile.email}}</p>
+                <p><i class="fas fa-phone me-2"></i>+254{{profile.mobile_number}}</p>
+                <a  href="{% url 'logout'%}"><p><i style="color:red" class="fas fa-power-off me-2"></i>Logout</p></a>
+            </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+</div>
+<div id="map">
+
+</div>
+
+{% endblock %}

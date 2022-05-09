@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+<div class="container text-center mt-5">
+    <h1>DO YOU FEEL THAT YOU HAVE<br> ADVICE TO GIVE TO THE CAR COMMUNITY<br>IN KENYA?</h1>
+</div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="prof-body">
+                <form action="{% url 'advice'%}" method="post" enctype="multipart/form-data">
+
+                    {% csrf_token%}
+                    {% bootstrap_form form %}
+                    <div class="form-group text-center">
+                        <input type="submit" class="m-4 btn btn-primary login-btn" value="POST ADVICE">
+                    </div>
+                    <input type="hidden" name="next" value="{{next}}">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

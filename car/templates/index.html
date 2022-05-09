@@ -1,0 +1,134 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content %}
+<br>
+<br>
+<div class="container-flud landing">
+
+    <div class="container mt-4 p-2 text-center">
+        <h1>WELCOME TO</h1>
+        <h1 class="heading"><span class="carnnect">CARNNECT</span></h1>
+        <h6 class="mt-3">A Helping Hand in the Car Community</h6>
+    </div>
+    <div class="container p-2">
+        <div class="row">
+            <div class="text-center">
+
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-subaru-logosubaruautomobilessubaru-carssubaru-logo-1701527676687agm3c.png"
+                    alt="">
+                <img class="logo mt-2 mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-toyota-car-logologocar-brand-logoscarstoyota-car-logo-1701527428948tj6m0.png"
+                    alt="">
+
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-nissan-logonissannissan-motorautomobile-manufactureryokohamanissan-logo-1701527528566k63x8.png"
+                    alt="">
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-honda-car-logologocar-brand-logoscarshonda-car-logo-1701527428101lhn2z.png"
+                    alt="">
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-bmw-car-logologocar-brand-logoscarsbmw-car-logo-1701527428054l1xd2.png"
+                    alt="">
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-mitsubishi-logomitsubishimitsubishi-groupmitsubishi-automobilesmitsubishi-logo-1701527515602pzdab.png"
+                    alt="">
+
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-volkswagen-car-logologocar-brand-logoscarsvolkswagen-car-logo-17015274290007mtte.png"
+                    alt="">
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-mazda-car-logologocar-brand-logoscarsmazda-car-logo-1701527428428lf8zo.png"
+                    alt="">
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-mercedes-benz-car-logologocar-brand-logoscarsmercedes-benz-car-logo-1701527428463n3kha.png"
+                    alt="">
+                <img class="logo mx-2"
+                    src="https://purepng.com/public/uploads/large/purepng.com-land-rover-logoland-roverfour-wheel-drive-vehiclesjaguar-land-roverland-rover-vehiclesland-rover-logo-1701527509415loadj.png"
+                    alt="">
+
+            </div>
+        </div>
+
+    </div>
+    <br><br>
+    <div class="text-center  container">
+        <a href="#target"><i class="fas fa-5x mt-5 pt-5 fa-chevron-down"></i></a>
+    </div>
+</div>
+
+<div id="target" class="container-fluid">
+    <div class="row landing-section">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="container text-center">
+                <h3>IS YOUR CAR HAVING <br><span class="carnnect">MECHANICAL</span> ISSUE?</h3>
+                <p class="p-2">View other mechanical issues <a href="{% url 'mechanical_issue' %}">here.</a></p>
+                <a href="{% url 'issue' %}"><button class="btn new-btn btn-primary">Post Mechanical
+                        Issue</button></a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="container">
+                <img class="dis-pic text-center"
+                    src="https://purepng.com/public/uploads/large/purepng.com-engine-motorsenginemotorcar-enginemechanical-energyburnfuel-1701527503086rkkfx.png"
+                    alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid landing-sale">
+    <div class="row landing-section">
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="container">
+                <img class="dis-pic me-3 text-center"
+                    src="https://purepng.com/public/uploads/large/purepng.com-volvovolvovolvo-carsvolvo-automobilevolvo-stylish-carvolvo-trucks-1701527683131ifrrb.png"
+                    alt="">
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="container text-center ms-5 pe-5">
+                <h3>DO YOU WISH TO <br><span class="carnnect">SELL</span> YOUR CAR?</h3>
+                <p class="p-2">Carnnect makes it possible to do so.<br>Visit Carnnect Bazaar <a
+                        href="{% url 'bazaar' %}">here.</a></p>
+                <a href="{% url 'sale' %}"><button class="btn new-btn btn-primary">Sell Your Car</button></a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row landing-section">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="container text-center">
+                <h3> <span class="carnnect">ADVICE</span> FOR THE<br>CAR COMMUNITY IN KENYA?</h3>
+                <p class="p-2">View the advice given <a href="{% url 'experience' %}">here.</a></p>
+                <a href="{% url 'advice' %}"><button class="btn new-btn btn-primary">Give Advice</button></a>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="container">
+                <img class="dis-pic text-center"
+                    src="https://purepng.com/public/uploads/large/purepng.com-open-bookobjectsopen-bookbook-school-open-education-object-library-study-631522325157tuyjg.png"
+                    alt="">
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="footer container-fluid">
+        <div class="container d-flex justify-content-between">
+            <p class="text-light">Copyright © 2022</p>
+
+            <a class="" href="{% url 'about' %}">
+                About Carnnect
+            </a>
+            <a class="" href="{% url 'contact' %}">
+                Contact Us
+            </a>
+            <p class="text-light text-small">Made with Love<i style="color:red" class="fas ms-2 fa-heart"></i></p>
+        </div>
+    </div>
+</footer>
+{% endblock %}

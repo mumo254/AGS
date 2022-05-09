@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light">
+
+  <div class="container">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          {% if user.is_authenticated %}
+          <ul class="navbar-nav m-auto  px-1">
+              <li class="nav-item mx-5 active">
+                  <a class="nav-link text-dark" href="{% url 'index'%}"><i class="fas fa-2x fa-home"></i> <span
+                          class="sr-only">(current)</span></a>
+              </li>
+             
+       
+          <li class="nav-item mx-5 dropdown">
+            <a class="nav-link text-dark  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-2x fa-calendar-alt"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'calendar' pk=user.id%}">View Your Schedule</a>
+              <a class="dropdown-item" href="{% url 'event_new' %}">Add Event</a>
+            </div>
+          </li>
+           
+              
+              <li class="nav-item mx-5">
+                <a class="nav-link text-dark" href="{% url 'map' %}"><i class="fas fa-2x fa-globe-africa"></i></a>
+            </li>
+  
+              <li class="nav-item mx-5">
+                <a class="nav-link text-dark" href="{% url 'tips' %}"><i class="fas fa-2x fa-car-battery"></i></a>
+            </li>
+     
+        
+          <li class="mx-5 nav-item">
+            {% for profile in profiles%}
+               <a href="{% url 'profile' pk=user.id%}"><img class="prof-display mt-1" src="{{profile.profile_pic.url}}" alt=""></a> 
+            {% endfor %}
+        </li>
+          </ul>
+          {% endif %}
+      </div>
+  </div>
+</nav>
+
+<!-- <a class="nav-link" href="{% url 'profile' pk=user.id%}"><img src="{{ prof.profile_pic.url }}" alt="" class="profile-img"> </a> -->

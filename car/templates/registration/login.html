@@ -1,0 +1,61 @@
+{%extends "registration/base.html"%}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container-fluid login-page">
+
+    <div class="row">
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 ">
+            <div class="container text-center welcome-section">
+                <div class="container text-center">
+                    <h1 class="heading">CARNNECT</h1>
+                    <p class="">A Helping Hand in the Car Community</p>
+                </div>
+                <div class="conatiner d-flex text-center car-icons">
+                    
+                    <img class="display-pic"
+                        src="https://images.pexels.com/photos/6147/cars-red-car-parking.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="">
+                    <img class="display-pic"
+                        src="https://images.pexels.com/photos/279949/pexels-photo-279949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="">
+                    <img class="display-pic"
+                        src="https://images.pexels.com/photos/6335850/pexels-photo-6335850.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-lg-6 col-md-6 col-sm-6 login-section">
+            {% if form.errors %}
+            <p> Password or Username is incorrect </p>
+            {% endif %}
+            <div class="panel panel-default login-body">
+
+                <div class="panel-heading">
+                    <h6 class="text-center">LOGIN</h6>
+                </div>
+                <div class="panel-body">
+
+                    <form action="/accounts/login/" method="post">
+                        {% csrf_token %}
+                        {% bootstrap_form form%}
+                        <div class="form-group">
+                            <input type="submit" class="btn login-btn  btn-primary btn-sm mt-3" value="LOGIN">
+                        </div>
+                        <input type="hidden" name="next" value="{{next}}">
+                    </form>
+                    <p class="mt-3">Do not have an account? Sign up <a href="/accounts/register/">here.</a></p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

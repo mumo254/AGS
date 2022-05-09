@@ -1,0 +1,123 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content %}
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+
+    }
+
+    .cont {
+        background-color: rgb(206, 202, 202);
+        min-height: 90vh;
+    }
+
+    .car {
+        padding: 5%;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .contact {
+        width: 70%;
+        padding: 2px;
+
+    }
+
+    .bttn {
+        padding: 1%;
+
+    }
+
+    .btttn {
+        border-radius: 25%;
+    }
+
+    .just {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .just img {
+        width: 80%;
+        height: 70vh;
+        object-fit: cover;
+    }
+
+    .just2 {
+        margin-top: 8rem;
+
+    }
+
+    .just3 {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-left: 2px solid black;
+        border-top: 2px solid black;
+        padding: 2rem;
+
+    }
+
+    .just2 h1 {
+        font-size: 40px;
+        margin-bottom: 2rem;
+        margin-right: 3rem;
+    }
+
+    .icon .ico {
+        margin: 10px;
+
+    }
+</style>
+
+
+<div class="cont">
+    <div class="container  mt-3">
+        <div class="row">
+            <div class="col-md-6 just">
+                <img src="/static/image/range2.webp" alt="">
+            </div>
+            <div class="col-md-6 just2">
+                <h1>Contact Us</h1>
+                <div class="just3">
+                    <div class="contact">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3 bttn">
+                                    <button type="button" class="btn btttn btn-secondary">Contact Us</button>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="icon">
+                                    <i class="fab fa-facebook-f ico fa-2x"></i>
+                                    <i class="far fa-envelope ico fa-2x"></i>
+                                    <i class="fab fa-twitter ico fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{% load bootstrap4 %}
+{% block content %}
+<div class="container">
+    <h6 class="text-center m-3">CARNNECT EVENT  CALENDER<i class="far fa-2x mx-2 fa-calendar-alt"></i></h6>
+</div>
+<div class="container">
+    {{ calendar|safe }}
+</div>
+
+
+{% endblock %}
